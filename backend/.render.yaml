@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: my-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: SUPABASE_URL
+        value: https://yxbxpkkhlyrwffuyjjcf.supabase.co
+      - key: SUPABASE_ANON_KEY
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl4Ynhwa2tobHlyd2ZmdXlqamNmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjE1NzE1NzAsImV4cCI6MjAzNzE0NzU3MH0.qiccWUXOLVW--JOCihPnZRU1mD8rjTMRktaX-a5yf5E
+      - key: JWT_SECRET
+        value: PkAYmIv+MUhtJNvmqzk2zl0RaCkzXSjhTPSPRWrpgi1QK04TMdXn8dfxe6n5EySSOYMHu6+ZuemYohVuC8SHPQ==
+    dockerfilePath: ./backend/Dockerfile
