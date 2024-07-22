@@ -13,3 +13,11 @@ services:
       - key: JWT_SECRET
         value: PkAYmIv+MUhtJNvmqzk2zl0RaCkzXSjhTPSPRWrpgi1QK04TMdXn8dfxe6n5EySSOYMHu6+ZuemYohVuC8SHPQ==
     dockerfilePath: ./backend/Dockerfile
+
+
+  - name: my-frontend
+    type: web
+    env: static
+    plan: free
+    buildCommand: npm install && npm run build
+    staticPublishPath: frontend/src/pages
